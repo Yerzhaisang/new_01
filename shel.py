@@ -8,7 +8,7 @@ import sys
 sqlpath = "/home/yerzh/comp1/queries/join-order-benchmark/"
 
 ls1 = [64]
-ls2 = [0.00003162]
+ls2 = [0.001]
 ls3 = [0.1]
 ls4 = [100]
 ls5 = [1, 10000, 1000000]
