@@ -5,12 +5,12 @@ from importt import make_query
 import os.path
 import sys
 
-sqlpath = "/home/yerzh/comp1/queries/"
+sqlpath = "/home/yerzh/comp1/queries/join-order-benchmark/"
 
-ls1 = [64, 100, 128, 150]
-ls2 = [0.00001, 0.0000316227]
-ls3 = [0.05, 0.1, 0.18]
-ls4 = [50, 100, 150]
+ls1 = [64]
+ls2 = [0.00001]
+ls3 = [0.1]
+ls4 = [100]
 ls5 = [1, 10000, 1000000]
 
 
@@ -73,5 +73,5 @@ for filename in onlyfiles:
                         make_query(list1, list2, query)
                         df = pd.DataFrame(list1, columns =["#iteration", "L1 norm of errors(log) on nodes", "L2 norm of errors(log) on nodes", "planning time", "execution time"])
                         dff = pd.DataFrame(list2, columns =["#iteration", "plans"])
-                        df.to_csv("/home/yerzh/comp1/new/"+filename+"/res/width="+str(j)+"_lr="+str(k)+"_slope="+str(l)+"_iter_obj="+str(n)+"_seed="+str(t)+".csv")
-                        dff.to_csv("/home/yerzh/comp1/new/"+filename+"/plans/width="+str(j)+"_lr="+str(k)+"_slope="+str(l)+"_iter_obj="+str(n)+"_seed="+str(t)+".csv")
+                        df.to_csv("/home/yerzh/comp1/new/res/"+filename.split('.')[0]+"width="+str(j)+"_lr="+str(k)+"_slope="+str(l)+"_iter_obj="+str(n)+"_seed="+str(t)+".csv")
+                        dff.to_csv("/home/yerzh/comp1/new/plans/"+filename.split('.')[0]+"width="+str(j)+"_lr="+str(k)+"_slope="+str(l)+"_iter_obj="+str(n)+"_seed="+str(t)+".csv")
