@@ -73,5 +73,5 @@ for filename in onlyfiles:
                         make_query(list1, list2, query)
                         df = pd.DataFrame(list1, columns =["#iteration", "L1 norm of errors(log) on nodes", "L2 norm of errors(log) on nodes", "planning time", "execution time"])
                         dff = pd.DataFrame(list2, columns =["#iteration", "plans"])
-                        df.to_csv("/home/yerzh/comp1/new/res/"+filename.split('.')[0]+"width="+str(j)+"_lr="+str(k)+"_slope="+str(l)+"_iter_obj="+str(n)+"_seed="+str(t)+".csv")
-                        dff.to_csv("/home/yerzh/comp1/new/plans/"+filename.split('.')[0]+"width="+str(j)+"_lr="+str(k)+"_slope="+str(l)+"_iter_obj="+str(n)+"_seed="+str(t)+".csv")
+                        df.to_csv("/home/yerzh/comp1/new/res/"+filename.split('.')[0]+"_width="+str(j)+"_lr="+str(k)+"_slope="+str(l)+"_iter_obj="+str(n)+"_seed="+str(t)+".csv")
+                        dff.to_csv("/home/yerzh/comp1/new/plans/"+filename.split('.')[0]+"_width="+str(j)+"_lr="+str(k)+"_slope="+str(l)+"_iter_obj="+str(n)+"_seed="+str(t)+".csv")
